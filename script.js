@@ -153,7 +153,7 @@ function display(data){
                     <div class="row g-0">
 
                         <!-- Real Feel -->
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="rounded-0 p-2">
                                 <p class="text-white-50">
                                     <i class="fa-solid fa-temperature-three-quarters"></i>
@@ -166,7 +166,7 @@ function display(data){
                         </div>
 
                         <!-- Wind -->
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="rounded-0 p-2">
                                 <p class="text-white-50">
                                     <i class="fa-solid fa-wind"></i>
@@ -179,7 +179,7 @@ function display(data){
                         </div>
 
                         <!-- Humidity -->
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="rounded-0 p-2">
                                 <p class="text-white-50">
                                     <i class="fa-solid fa-droplet"></i>
@@ -192,7 +192,7 @@ function display(data){
                         </div>
 
                         <!-- UV -->
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="rounded-0 p-2">
                                 <p class="text-white-50">
                                     <i class="fa-solid fa-sun"></i>
