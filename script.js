@@ -105,125 +105,124 @@ function display(data){
 
     // Main HTML
     let htmlCode = `
-        <div class="row g-4">
+    <div class="row g-4">
 
-            <!-- LEFT SECTION -->
-            <div class="col-lg-8">
+        <!-- Current Weather -->
+        <div class="col-12">
+            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0 shadow-sm" id="current">
+                <div class="row align-items-center">
 
-                <!-- Current Weather -->
-                <div class="card bg-dark text-white px-5 rounded-4 border-0" id="current">
-                    <div class="row d-flex justify-content-space-around align-item-center">
-                        <div class="col-8">
-                            <h1>
-                                ${data.location.name}
-                            </h1>
-                            <p>Chance of rain:
-                                ${data.current.chance_of_rain}%
-                            </p>
-                            <h1 class="display-3 fw-bold">
-                                ${data.current.temp_c}<sup>o</sup>C
-                            </h1>
-                        </div>
+                    <div class="col-md-7 col-7">
+                        <h1>${data.location.name}</h1>
 
-                        <div class="col-4 py-4 d-flex align-items-center">
-                            <img
-                                src="https:${data.current.condition.icon}"
-                                alt=""
-                                width="120px"
-                            >
-                        </div>
-                    </div>
-                </div>
+                        <p class="text-white-50">
+                            Chance of rain:
+                            ${data.current.chance_of_rain}%
+                        </p>
 
-                <!-- Today's Forecast -->
-                <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 mt-2">
-                    <h6 class="mb-4 text-white-50">
-                        TODAY'S FORECAST
-                    </h6>
-                    <div class="row">
-                        ${todayForecast}
-                    </div>
-                </div>
-
-                <!-- Air Conditions -->
-                <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 mt-2">
-                    <div class="d-flex justify-content-between mb-4">
-                        <h6 class="text-white-50 p-1">
-                            AIR CONDITIONS
-                        </h4>
-                        <button class="btn btn-primary btn-sm rounded-pill px-3">
-                            See more
-                        </button>
+                        <h1 class="display-3 fw-bold">
+                            ${data.current.temp_c}<sup>°</sup>C
+                        </h1>
                     </div>
 
-                    <div class="row g-0">
-
-                        <!-- Real Feel -->
-                        <div class="col-6">
-                            <div class="rounded-0 p-2">
-                                <p class="text-white-50">
-                                    <i class="fa-solid fa-temperature-three-quarters"></i>
-                                    Real Feel
-                                </p>
-                                <h4>
-                                    ${data.current.feelslike_c}°C
-                                </h4>
-                            </div>
-                        </div>
-
-                        <!-- Wind -->
-                        <div class="col-6">
-                            <div class="rounded-0 p-2">
-                                <p class="text-white-50">
-                                    <i class="fa-solid fa-wind"></i>
-                                    Wind
-                                </p>
-                                <h4>
-                                    ${data.current.wind_kph} km/h
-                                </h4>
-                            </div>
-                        </div>
-
-                        <!-- Humidity -->
-                        <div class="col-6">
-                            <div class="rounded-0 p-2">
-                                <p class="text-white-50">
-                                    <i class="fa-solid fa-droplet"></i>
-                                    Humidity
-                                </p>
-                                <h4>
-                                    ${data.current.humidity}%
-                                </h4>
-                            </div>
-                        </div>
-
-                        <!-- UV -->
-                        <div class="col-6">
-                            <div class="rounded-0 p-2">
-                                <p class="text-white-50">
-                                    <i class="fa-solid fa-sun"></i>
-                                    UV Index
-                                </p>
-                                <h4>
-                                    ${data.current.uv}
-                                </h4>
-                            </div>
-                        </div>
+                    <div class="col-md-5 col-5 text-end">
+                        <img
+                            src="https:${data.current.condition.icon}"
+                            width="100"
+                        >
                     </div>
-                </div>
-            </div>
 
-            <!-- RIGHT SECTION -->
-            <div class="col-lg-4">
-                <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 h-100">
-                    <h6 class="mb-4 text-white-50">
-                        3-DAY FORECAST
-                    </h6>
-                    ${weeklyForecast}
                 </div>
             </div>
         </div>
 
+        <!-- Left Section -->
+        <div class="col-lg-8">
+
+            <!-- Today's Forecast -->
+            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0">
+                <h6 class="mb-4 text-white-50">
+                    TODAY'S FORECAST
+                </h6>
+
+                <div class="row">
+                    ${todayForecast}
+                </div>
+            </div>
+
+            <!-- Air Conditions -->
+            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0 mt-3">
+
+                <div class="d-flex justify-content-between mb-4">
+                    <h6 class="text-white-50">
+                        AIR CONDITIONS
+                    </h6>
+
+                    <button class="btn btn-primary btn-sm rounded-pill px-3">
+                        See More
+                    </button>
+                </div>
+
+                <div class="row g-3">
+
+                    <div class="col-6">
+                        <p class="text-white-50">
+                            <i class="fa-solid fa-temperature-three-quarters"></i>
+                            Real Feel
+                        </p>
+
+                        <h4>${data.current.feelslike_c}°C</h4>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="text-white-50">
+                            <i class="fa-solid fa-wind"></i>
+                            Wind
+                        </p>
+
+                        <h4>${data.current.wind_kph} km/h</h4>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="text-white-50">
+                            <i class="fa-solid fa-droplet"></i>
+                            Humidity
+                        </p>
+
+                        <h4>${data.current.humidity}%</h4>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="text-white-50">
+                            <i class="fa-solid fa-sun"></i>
+                            UV Index
+                        </p>
+
+                        <h4>${data.current.uv}</h4>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-lg-4">
+
+            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0 h-100">
+
+                <h6 class="mb-4 text-white-50">
+                    3-DAY FORECAST
+                </h6>
+
+                ${weeklyForecast}
+
+            </div>
+
+        </div>
+
+    </div>
     `;
+
     document.getElementById("ref").innerHTML = htmlCode;
 }
