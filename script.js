@@ -35,10 +35,16 @@ async function getData(e) {
         input.value = "";
     }
 }
-function showForm() {
-            document.getElementById("empty-box").style.display = "none";
-            document.getElementById("form-box").style.display = "block";
-        }
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        document.getElementById("empty-box").style.display = "none";
+        document.getElementById("form-box").style.display = "block";
+
+        // Enable scrolling after splash screen
+        document.body.style.overflow = "auto";
+    }, 5000);
+});
 
 function display(data){
 
@@ -211,7 +217,7 @@ function display(data){
             <div class="col-lg-4">
                 <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 h-100">
                     <h6 class="mb-4 text-white-50">
-                        7-DAY FORECAST
+                        3-DAY FORECAST
                     </h6>
                     ${weeklyForecast}
                 </div>
