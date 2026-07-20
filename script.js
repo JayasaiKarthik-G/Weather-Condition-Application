@@ -109,7 +109,7 @@ function display(data){
 
         <!-- Current Weather -->
         <div class="col-12">
-            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0 shadow-sm" id="current">
+            <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 shadow-sm" id="current">
                 <div class="row align-items-center">
 
                     <div class="col-md-7 col-7">
@@ -140,7 +140,7 @@ function display(data){
         <div class="col-lg-8">
 
             <!-- Today's Forecast -->
-            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0">
+            <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0">
                 <h6 class="mb-4 text-white-50">
                     TODAY'S FORECAST
                 </h6>
@@ -151,7 +151,7 @@ function display(data){
             </div>
 
             <!-- Air Conditions -->
-            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0 mt-3">
+            <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 mt-3">
 
                 <div class="d-flex justify-content-between mb-4">
                     <h6 class="text-white-50">
@@ -209,7 +209,7 @@ function display(data){
         <!-- Right Section -->
         <div class="col-lg-4">
 
-            <div class="card bg-dark bg-gradient text-white p-5 rounded-4 border-0 h-100">
+            <div class="card bg-dark bg-gradient text-white p-4 rounded-4 border-0 h-100">
 
                 <h6 class="mb-4 text-white-50">
                     3-DAY FORECAST
